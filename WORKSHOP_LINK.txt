@@ -1,0 +1,5 @@
+[h2]Host your own Firestorm server[/h2]
+
+[url=https://github.com/panectrl/firestorm-server]Firestorm hosting downloads and instructions[/url]
+
+The first public hosting package is being prepared. Ordinary players only need the Workshop content and a Firestorm-enabled server to join; the hosting download is for people running their own server.
