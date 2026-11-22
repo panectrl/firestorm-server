@@ -8,9 +8,10 @@ enemy encounters and mission pacing. Gameplay systems run on the server.
 
 ## Downloads
 
-[Download the Windows hosting preview (v0.1.0-preview.1)](https://github.com/panectrl/firestorm-server/releases/tag/v0.1.0-preview.1).
-The release includes the ZIP and its SHA-256 checksum. See the release notes for
-the supported stock Reactive Drop build and matching Workshop revision.
+[Download the Windows hosting preview (v0.1.0-preview.2)](https://github.com/panectrl/firestorm-server/releases/tag/v0.1.0-preview.2).
+The release includes the ZIP and its SHA-256 checksum. Sync the Firestorm
+Workshop item and run the package’s `Check` action. Start when it reports
+`workshopContent: matched`. The previous preview remains available in Releases.
 
 This repository is Firestorm’s public download page for server hosts. Firestorm’s
 development source is private.
@@ -32,7 +33,7 @@ repository.
 
 The ZIP includes `server.dll`, an installation and startup script with rollback,
 configuration examples, checksums, and notices. Use the setup instructions in
-the ZIP and install the Workshop revision listed in the release notes.
+the ZIP and match the Workshop VPK checksum listed in the release notes.
 
 Reactive Drop's [official dedicated-server instructions](https://developer.reactivedrop.com/faq.html#i-would-like-to-run-a-dedicated-server-for-alien-swarm-reactive-drop-and-dont-know-where-to-start)
 explain how to install the base server through SteamCMD.
