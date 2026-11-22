@@ -38,6 +38,44 @@ the ZIP and match the Workshop VPK checksum listed in the release notes.
 Reactive Drop's [official dedicated-server instructions](https://developer.reactivedrop.com/faq.html#i-would-like-to-run-a-dedicated-server-for-alien-swarm-reactive-drop-and-dont-know-where-to-start)
 explain how to install the base server through SteamCMD.
 
+## Activating Firestorm in Preview 2
+
+The current public hosting ZIP does **not** automatically select the Firestorm challenge.
+Complete the install and Workshop sync described in the ZIP's README first.
+
+1. Add `rd_enable_workshop_item 3806545472` to the server's `reactivedrop/cfg/workshop.cfg`.
+2. Copy `config/firestorm-activate.cfg` from the hosting ZIP to the server's `reactivedrop/cfg/` folder.
+3. From PowerShell in the extracted hosting ZIP folder, run `SyncWorkshop`, wait for the
+   Workshop item to finish downloading/mounting, and type `quit` in the game server console.
+   Then run `Check` and `Start` (substitute your server folder if different):
+
+   ```powershell
+   .\Firestorm-Hosting.ps1 -Action SyncWorkshop -ServerRoot "C:\ReactiveDropServer"
+   .\Firestorm-Hosting.ps1 -Action Check -ServerRoot "C:\ReactiveDropServer"
+   .\Firestorm-Hosting.ps1 -Action Start -ServerRoot "C:\ReactiveDropServer" -Public
+   ```
+
+4. **In the running dedicated-server console**, confirm the Firestorm Workshop item is loaded,
+   then enter these commands one at a time:
+
+   ```text
+   rd_workshop_list_vpk_paths
+   exec firestorm-activate
+   changelevel asi-jac1-landingbay_01
+   rd_challenge
+   ```
+
+   The final command should report `horde_firestorm_proto`.
+
+**Do not put `exec firestorm-activate` in `server.cfg` for this preview.** The config can
+execute before Workshop mounting or during subsequent map changes. A `workshopContent: matched`
+result verifies the file on disk, **not** the mounted provider, active challenge, or a
+successful remote join. Verify those separately.
+
+Firestorm-only challenge locking is **off by default**. Other challenges can be selected,
+but compatibility with all third-party challenges is not yet qualified.
+
+---
 ## Updates and support
 
 Release notes will identify the package version, supported content and validation
