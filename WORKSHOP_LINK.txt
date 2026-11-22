@@ -1,7 +1,7 @@
 [h2]Host your own Firestorm server[/h2]
 
-The Windows hosting preview is available on GitHub. The ZIP includes server.dll, setup and rollback instructions, and checksums.
+The Windows hosting preview is available on GitHub. It includes server.dll, setup and rollback instructions, and checksums. Use the matching Firestorm Workshop update before starting the server.
 
-[url=https://github.com/panectrl/firestorm-server/releases/tag/v0.1.0-preview.1]Download the Firestorm Windows server preview[/url]
+[url=https://github.com/panectrl/firestorm-server/releases/tag/v0.1.0-preview.2]Download the Firestorm Windows server preview[/url]
 
 Players can subscribe here and join a Firestorm-enabled server using the standard Reactive Drop client.
